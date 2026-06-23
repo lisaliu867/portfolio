@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Lisa Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Mulish', sans-serif; background: #F3F1E9; color: #33402F; min-height: 100vh; display: flex; flex-direction: column; }
+    ::selection { background: #7E9A6E; color: #fff; }
+    a { color: inherit; text-decoration: none; }
+
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Nav ────────────────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px 56px;
+      background: rgba(243,241,233,.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(51,64,47,.12);
+    }
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px; letter-spacing: .01em; color: #33402F;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 38px;
+      font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+    }
+    .nav-links a { opacity: .7; transition: opacity .2s; }
+    .nav-links a:hover { opacity: 1; }
+    .nav-links a.active {
+      opacity: 1;
+      border-bottom: 2px solid #A8BE97; padding-bottom: 2px;
+    }
+
+    /* ── Page header ────────────────────────────────────── */
+    .page-header {
+      max-width: 1180px; width: 100%; margin: 0 auto;
+      padding: 88px 56px 8px;
+      animation: floatUp .6s both;
+    }
+    .page-header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(40px, 7vw, 84px);
+      line-height: 1; color: #33402F;
+    }
+
+    /* ── Project list ───────────────────────────────────── */
+    .project-list {
+      max-width: 1180px; width: 100%; margin: 0 auto;
+      padding: 32px 56px 96px;
+      animation: floatUp .6s .08s both;
+    }
+
+    .project-row {
+      display: grid;
+      grid-template-columns: 64px 1.1fr 1.4fr auto;
+      gap: 32px; align-items: center;
+      padding: 16px 8px;
+      border-top: 1px solid rgba(51,64,47,.14);
+      transition: padding .2s, background .2s;
+    }
+    .project-row:last-child { border-bottom: 1px solid rgba(51,64,47,.14); }
+    .project-row:hover { background: #E7E9DC; padding-left: 20px; padding-right: 20px; }
+
+    .project-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px; color: #A8BE97;
+    }
+    .project-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(24px, 2.6vw, 34px); color: #33402F;
+    }
+    .project-desc {
+      font-size: 15px; line-height: 1.6; color: #54624C; max-width: 380px;
+    }
+    .project-meta {
+      display: flex; align-items: center; gap: 18px;
+    }
+    .project-tag {
+      font-size: 13px; font-weight: 700; color: #8A9682;
+    }
+    .project-arrow {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px; color: #7E9A6E;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Lisa Liu</a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="writing.html">Writing</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Personal projects</h1>
+  </header>
+
+  <section class="project-list">
+
+    <a href="#" class="project-row">
+      <span class="project-num">01</span>
+      <h3 class="project-name">Tidepool</h3>
+      <p class="project-desc">A gentle habit tracker that grows a tide pool as you keep your streaks. 4.8★ on the App Store.</p>
+      <span class="project-meta">
+        <span class="project-tag">SwiftUI · 2024</span>
+        <span class="project-arrow">→</span>
+      </span>
+    </a>
+
+    <a href="#" class="project-row">
+      <span class="project-num">02</span>
+      <h3 class="project-name">Margin</h3>
+      <p class="project-desc">A distraction-free reading app with social annotations. Built the design system and front-end end to end.</p>
+      <span class="project-meta">
+        <span class="project-tag">React · 2023</span>
+        <span class="project-arrow">→</span>
+      </span>
+    </a>
+
+    <a href="#" class="project-row">
+      <span class="project-num">03</span>
+      <h3 class="project-name">Fieldnotes</h3>
+      <p class="project-desc">A free Figma kit for documenting research. Downloaded 30k+ times by design teams worldwide.</p>
+      <span class="project-meta">
+        <span class="project-tag">Figma · OSS</span>
+        <span class="project-arrow">→</span>
+      </span>
+    </a>
+
+    <a href="#" class="project-row">
+      <span class="project-num">04</span>
+      <h3 class="project-name">Lumen</h3>
+      <p class="project-desc">A tiny tool that turns your daily mood into a generative color gradient. A quiet study in data &amp; feeling.</p>
+      <span class="project-meta">
+        <span class="project-tag">Web · 2022</span>
+        <span class="project-arrow">→</span>
+      </span>
+    </a>
+
+  </section>
+
+</body>
+</html>
